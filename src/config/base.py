@@ -4,4 +4,5 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///default.db')
+    SQLALCHEMY_DATABASE_URI = os.getenv('DATABASE_URL', 'sqlite:///default.db')
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
